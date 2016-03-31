@@ -1,0 +1,50 @@
+extends ../layout
+
+block content
+  h1 New Album
+
+  form(action="/albums", method="post")
+    div
+      h3 Artist
+      input(type="text" name="album_name")
+
+    div
+      h3 Album
+      input(type="text" name="album_title")
+
+    div
+      h3 Genre
+      div
+        select(name="genre")
+          option
+          option Rock
+          option Hip Hop
+          option Jazz
+          option Folk
+          option Blues
+          option Other
+
+    div
+      h3 Stars
+        div
+          label 1
+          input(type="radio" name="star_rating" value="1")
+          input(type="radio" name="star_rating" value="2")
+          input(type="radio" name="star_rating" value="3")
+          input(type="radio" name="star_rating" value="4")
+          input(type="radio" name="star_rating" value="5")
+          label 5
+
+    div
+      input(type="checkbox" name="explicit")
+      label Contains Explicit Lyrics
+
+    br
+
+    div
+      input(type="submit")
+
+    br
+
+    div
+      a(href="/albums") Cancel
